@@ -1,27 +1,21 @@
 use std::collections::LinkedList;
 
-struct RowQuery<T>{
-    map: LinkedList<T>,
+trait Graph {
+    type E;
+
+    fn edges(&self) -> Vec<Self::E>;
 }
-impl<T> RowQuery<T>{
-    fn new() -> RowQuery<T>{
-        let mut d = LinkedList::<T>::new();
-        RowQuery{
-            map: d,
-        }
-    }
-}
-struct HashMap<T>{
-    map: Vec<RowQuery<T>>,
-}
-impl<T> HashMap<T>{
-    fn new() -> HashMap<T>{
-        let mut d: Vec<RowQuery<T>> = vec![];
-        HashMap{
-            map: d,
-        }
+
+struct MyGraph;
+
+impl Graph for MyGraph {
+    type E = i32;
+
+    fn edges(&self) -> Vec<Self::E> {
+        Vec::new()
     }
 }
 fn main(){
-
+  let graph = MyGraph;
+  let obj = Box::new(graph) as Box<Graph<E=i32>>;
 }
