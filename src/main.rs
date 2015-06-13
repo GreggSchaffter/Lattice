@@ -47,5 +47,5 @@ impl db{
     }
 }
 fn main(){
-
+    //TODO: Implement server aspect.
 }
