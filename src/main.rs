@@ -1,5 +1,6 @@
 use std::collections::LinkedList;
 
+// DataObj: This stores the data within the Column.
 struct DataObj{
     data: String,
     t: String,
@@ -12,6 +13,7 @@ impl DataObj{
       }
     }
 }
+// Column: Stores each dataobj of particular type.
 struct Column{
     name: String,
     dataobjs: LinkedList<DataObj>,
@@ -26,6 +28,7 @@ impl Column{
       }
     }
 }
+// Table: Stores the columns
 struct Table{
     columns: Vec<Column>,
 }
@@ -36,6 +39,7 @@ impl Table{
       }
     }
 }
+// Database: Stores a set of tables
 struct db{
   tables: Vec<Table>,
 }
@@ -44,6 +48,16 @@ impl db{
       db{
         tables: Vec::<Table>::new(),
       }
+    }
+}
+struct Server{
+    dbs: Vec<db>.
+}
+impl Server{
+    fn new() -> Server{
+        Server{
+            dbs: Vec::<db>::new(),
+        }
     }
 }
 fn main(){
