@@ -4,4 +4,4 @@ Lattice is intended to be a fast, memory safe database management system, develo
 Contributers:
 
 Gregg Schaffter,
-Sato
+cyanoats
